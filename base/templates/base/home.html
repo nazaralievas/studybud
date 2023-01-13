@@ -26,6 +26,7 @@
     </div>
 
     <div>
+        <h5>{{room_count}} rooms available</h5>
         <a href="{% url 'create-room' %}"><h2>Create room</h2></a>
 
         <div>
@@ -33,7 +34,7 @@
             <div>
                 <a href="{% url 'update-room' room.id %}">Edit</a>
                 <a href="{% url 'delete-room' room.id %}">Delete</a><br>
-                <h4>{{room.host.username}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h4>
+                <h4>@{{room.host.username}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h4>
                 <small>{{room.topic.name}}</small>
                 <hr>
             </div>
