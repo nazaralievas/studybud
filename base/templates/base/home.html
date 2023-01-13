@@ -5,14 +5,14 @@
 <h1>Home Template</h1>
 
 <div>
-    <a href="{% url 'create-room' %}">Create room</a>
-    <hr>
+    <a href="{% url 'create-room' %}"><h2>Create room</h2></a>
+
     <div>
         {% for room in rooms %}
         <div>
             <a href="{% url 'update-room' room.id %}">Edit</a>
-            <span>@{{room.host.username}}</span>
-            <h4>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h4>
+            <a href="{% url 'delete-room' room.id %}">Delete</a><br>
+            <h4>{{room.host.username}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h4>
             <small>{{room.topic.name}}</small>
             <hr>
         </div>
