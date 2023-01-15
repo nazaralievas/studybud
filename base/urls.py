@@ -7,7 +7,9 @@ urlpatterns = [
     path('logout/', logoutUser, name='logout'),
     path('register/', registerPage, name='register'),
     path('', home, name='home'),
+
     path('room/<str:pk>/', room, name='room'),
+    path('profile/<str:pk>/', userProfile, name='user-profile'),
     path('create-room/', createRoom, name='create-room'),
     path('update-room/<str:pk>/', updateRoom, name='update-room'),
     path('delete-room/<str:pk>/', deleteRoom, name='delete-room'),
