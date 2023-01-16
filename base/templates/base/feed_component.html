@@ -34,7 +34,7 @@
         </svg>
         {{room.participants.all.count}}
       </a>
-      <p class="roomListRoom__topic">{{room.topic.name}}</p>
+      <p class="roomListRoom__topic"><a href="{% url 'home' %}?q={{room.topic.name}}">{{room.topic.name}}</a></p>
     </div>
   </div>
 {% endfor %}
